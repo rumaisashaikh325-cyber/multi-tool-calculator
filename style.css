@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 360px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Menu Buttons */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.menu button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #667eea;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background: #5a67d8;
+  transform: scale(1.05);
+}
+
+/* Tool Box */
+.tool {
+  display: none;
+  animation: fade 0.4s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inputs */
+.tool input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.tool input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Calculator Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.buttons button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+.zero {
+  grid-column: span 2;
+  background: #764ba2;
+  color: #fff;
+}
+
+/* Action Buttons */
+.tool button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  background: #667eea;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tool button:hover {
+  background: #5a67d8;
+}
+
+/* Result Text */
+.tool p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Mobile Friendly */
+@media (max-width: 400px) {
+  .container {
+    margin: 10px;
+  }
+}
+/* INFO PAGES (About, Privacy, Contact) */
+.info-page h1 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.info-page p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.info-box {
+  background: #f7f8ff;
+  padding: 15px;
+  border-left: 5px solid #667eea;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  background: #667eea;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  background: #5a67d8;
+}

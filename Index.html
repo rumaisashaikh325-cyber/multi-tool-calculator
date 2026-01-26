@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Tool Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🧮 Multi Tool Calculator</h1>
+
+  <!-- MENU -->
+  <div class="menu">
+    <button onclick="showTool('normal')">Calculator</button>
+    <button onclick="showTool('bmi')">BMI</button>
+    <button onclick="showTool('age')">Age</button>
+    <button onclick="showTool('percent')">%</button>
+    <button onclick="showTool('emi')">EMI</button>
+    <button onclick="showTool('gst')">GST</button>
+    <button onclick="showTool('unit')">Unit</button>
+  </div>
+
+  <!-- NORMAL CALCULATOR -->
+  <div id="normal" class="tool">
+    <input type="text" id="result" readonly placeholder="0">
+    <div class="buttons">
+      <button onclick="clr()">C</button>
+      <button onclick="del()">⌫</button>
+      <button onclick="insert('/')">÷</button>
+      <button onclick="insert('*')">×</button>
+
+      <button onclick="insert('7')">7</button>
+      <button onclick="insert('8')">8</button>
+      <button onclick="insert('9')">9</button>
+      <button onclick="insert('-')">−</button>
+
+      <button onclick="insert('4')">4</button>
+      <button onclick="insert('5')">5</button>
+      <button onclick="insert('6')">6</button>
+      <button onclick="insert('+')">+</button>
+
+      <button onclick="insert('1')">1</button>
+      <button onclick="insert('2')">2</button>
+      <button onclick="insert('3')">3</button>
+      <button onclick="calculate()">=</button>
+
+      <button onclick="insert('0')" class="zero">0</button>
+      <button onclick="insert('.')">.</button>
+    </div>
+  </div>
+
+  <!-- BMI -->
+  <div id="bmi" class="tool">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <input type="number" id="height" placeholder="Height (cm)">
+    <button onclick="bmiCalc()">Calculate BMI</button>
+    <p id="bmiResult"></p>
+  </div>
+
+  <!-- AGE -->
+  <div id="age" class="tool">
+    <input type="date" id="dob">
+    <button onclick="ageCalc()">Calculate Age</button>
+    <p id="ageResult"></p>
+  </div>
+
+  <!-- PERCENTAGE -->
+  <div id="percent" class="tool">
+    <input type="number" id="obtained" placeholder="Obtained Marks">
+    <input type="number" id="total" placeholder="Total Marks">
+    <button onclick="percentCalc()">Calculate</button>
+    <p id="percentResult"></p>
+  </div>
+
+  <!-- EMI -->
+  <div id="emi" class="tool">
+    <input type="number" id="loan" placeholder="Loan Amount">
+    <input type="number" id="rate" placeholder="Interest %">
+    <input type="number" id="time" placeholder="Time (Years)">
+    <button onclick="emiCalc()">Calculate EMI</button>
+    <p id="emiResult"></p>
+  </div>
+
+  <!-- GST -->
+  <div id="gst" class="tool">
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="number" id="gstRate" placeholder="GST %">
+    <button onclick="gstCalc()">Calculate GST</button>
+    <p id="gstResult"></p>
+  </div>
+
+  <!-- UNIT -->
+  <div id="unit" class="tool">
+    <input type="number" id="cm" placeholder="Centimeters">
+    <button onclick="unitCalc()">Convert to Meter</button>
+    <p id="unitResult"></p>
+  </div>
+
+  <!-- FOOTER -->
+  <hr>
+  <p style="text-align:center">
+    <a href="about.html">About</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="contact.html">Contact</a>
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
